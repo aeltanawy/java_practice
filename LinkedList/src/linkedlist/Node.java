@@ -1,36 +1,36 @@
 
 package linkedlist;
 
-public class Node {
+public class Node<D> {
     //properties
     Node next;
-    int data; //assuming our data is int but could be other data type
+    D data; //assuming our data is int but could be other data type
     
     //constructors
-    public Node(int newData) {
+    public Node(D newData) {
         data = newData;
         next = null;
     }
     
-    public Node(int newData, Node newNext) {
+    public Node(D newData, Node newNext) {
         data = newData;
         next = newNext;
     }
     
     //Getter & Setters
-    public int getData() {
+    public D getData() {
         return data;
     }
     
-    public Node getNext() {
+    public Node<D> getNext() {
         return next;
     }
     
-    public void setData(int newData) {
+    public void setData(D newData) {
         data = newData;
     }
     
-    public void setNext(Node newNode) {
+    public void setNext(Node<D. newNode) {
         next = newNode;
     }
 }

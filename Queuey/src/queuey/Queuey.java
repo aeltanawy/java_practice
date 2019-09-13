@@ -5,9 +5,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-public class Queuey {
+public class Queuey<D> {
 
-    LinkedList queue = new LinkedList();
+    LinkedList<D> queue = new LinkedList();
     
     // making a queue instance
     public Queuey() {
@@ -25,18 +25,18 @@ public class Queuey {
     }
     
     // Enqueueing an item
-    public void enqueue(String n) {
+    public void enqueue(D n) {
         queue.addLast(n);
     }
     
     // dequeuing an item
-    public String dequeue() {
-        return (String) queue.remove(0);
+    public D dequeue() {
+        return queue.remove(0);
     }
     
     // peek at first item
-    public String peek() {
-        return (String) queue.get(0); //(int) called casting
+    public D peek() {
+        return queue.get(0); //(int) called casting
         //return (int) queue.get(0); //(int) called casting
     }
 
@@ -50,26 +50,26 @@ public class Queuey {
         stacky.peek();
         System.out.println(stacky.pop() + " ");
         
-        Queue<String> q = new LinkedList<>(); //built in queue, can't instanstiate abstract or interface classes
+        Queue q = new LinkedList<>(); //built in queue, can't instanstiate abstract or interface classes
         q.add("hi");
         q.add("there");
         System.out.println(q.remove() + " ");
         System.out.println(q.remove() + ".");
         
         
-        //Queuey q = new Queuey();
-        //q.enqueue("Hi");
-        //q.enqueue("there");
-        //System.out.println(q.dequeue() + " ");
-        //System.out.println(q.dequeue() + ".");
+        Queuey p = new Queuey();
+        p.enqueue("Hi");
+        p.enqueue("there");
+        System.out.println(p.dequeue() + " ");
+        System.out.println(p.dequeue() + ".");
 
-
-        //q.enqueue(5);
-        //q.enqueue(7);
-        //q.enqueue(6);
-        //System.out.println("First out " + q.dequeue());
-        //System.out.println("Peek at first item " + q.peek());
-        //System.out.println("Third out " + q.dequeue());
+        Queuey i = new Queuey();
+        i.enqueue(5);
+        i.enqueue(7);
+        i.enqueue(6);
+        System.out.println("First out " + i.dequeue());
+        System.out.println("Peek at first item " + i.peek());
+        System.out.println("Third out " + i.dequeue());
 
         
     }
