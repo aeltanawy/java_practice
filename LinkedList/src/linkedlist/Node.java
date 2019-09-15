@@ -30,7 +30,7 @@ public class Node<D> {
         data = newData;
     }
     
-    public void setNext(Node<D. newNode) {
+    public void setNext(Node<D> newNode) {
         next = newNode;
     }
 }
